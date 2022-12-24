@@ -28,7 +28,7 @@ and much more could be done.
 
 ### What is CDN and why do we use it?
 - Content Delivery Network refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
-- It helps in quick transfer of the assests required for loading internt contents including html pages, javascript files, stylesheets, images, videos, etc.
+- It helps in quick transfer of the assets required for loading internt contents including html pages, javascript files, stylesheets, images, videos, etc.
 
 ### Why is React known as React?
 React was developed for applications (Facebook) that have constantly changing data. Since React is a front-end framework or the “View” in MVC, this means that as the user clicks around and changes the app's data, the view should “react” or change with those user events.
@@ -57,6 +57,7 @@ React was developed for applications (Facebook) that have constantly changing da
 
 ### Difference between async and differ in script.
 Both allows browser to continue parsing the HTML document while script is downloading, but difference come in the speed and sequence of execution. 
+
 **Async** : 
 - It allows the script(JS files) to run as soon as it's loaded, without blocking other elements on the page. 
 - It allows browser to handle loading of script asynchronously.
