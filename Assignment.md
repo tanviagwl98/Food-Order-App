@@ -61,7 +61,7 @@ Both allows browser to continue parsing the HTML document while script is downlo
 **Async** : 
 - It allows the script(JS files) to run as soon as it's loaded, without blocking other elements on the page. 
 - It allows browser to handle loading of script asynchronously.
-- It reduces load time of a page as scripts can be loaded in parallel as the order of loading is not restricted, but HTML parsing is completed after loading and execution.
+- It reduces load time of a page as scripts can be loaded in parallel as the order of loading is not restricted, but further HTML parsing is completed after execution of the script.
 
 **Defer**:
 - It allows the script to be executed only after the page is loaded completely though loading of script is in parallel with HTML parsing.
