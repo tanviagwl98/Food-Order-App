@@ -7,3 +7,7 @@
 3. Metadata will not appear on screen, rather it is machine parsable.
 4. It helps browsers to display and reload page/content and search engine to identify keywords.
 
+# Day-2
+
+### Parcel
+
