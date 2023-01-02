@@ -1,0 +1,29 @@
+{
+    "name": "namastereact",
+    "version": "1.0.0",
+    "description": "1. https://github.com/tanviagwl98/NamasteReact/blob/master/Learning.md\r 2. https://github.com/tanviagwl98/NamasteReact/blob/master/Assignment.md",
+    "browsersList": "last 2 versions",
+    "scripts": {
+        "test": "jest",
+        "start": "parcel",
+        "build": "parcel build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tanviagwl98/NamasteReact.git"
+    },
+    "author": "Tanvi Agarwal",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tanviagwl98/NamasteReact/issues"
+    },
+    "homepage": "https://github.com/tanviagwl98/NamasteReact#readme",
+    "devDependencies": {
+        "parcel": "^2.8.2",
+        "process": "^0.11.10"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
