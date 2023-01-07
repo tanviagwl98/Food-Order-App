@@ -11,3 +11,6 @@
 
 ### Parcel
 
+1. Initialise npm in your project npm init
+2. Install parcel, react and react-dom
+3. Build the project with parcel, npx parcel index.html //entrypoint
