@@ -1,34 +1,19 @@
 import React from "react";
-import ReactDOM, { createRoot } from "react-dom/client";
-/**
-     Header
-        - Logo(Title)
-        - Nav Items(Right Side)
-        - Cart
-     Body 
-        - Search bar
-        - RestrauntList
-          - RestaurantCard (many cards)
-              - Image
-              - Name
-              - Rating
-              - Cusines
-     Footer
-      - links
-      - Copyright
-    
-    */
-const Title = () => (
-  <a href="/">
-    <img
-      className="logo"
-      alt="logo"
-      src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj"
-    />
-  </a>
-);
+import ReactDOM from "react-dom/client";
+import './index.css';
 
-// Composing Comopnentss
+const Title = () => {
+  return (
+    <a href="/">
+      <img
+        alt="logo"
+        className="logo"
+        src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj"
+      />
+    </a>
+  );
+};
+
 const Header = () => {
   return (
     <div className="header">
@@ -44,8 +29,6 @@ const Header = () => {
     </div>
   );
 };
-
-//Config Driven UI
 
 const restrautList = [
   {
@@ -792,39 +775,43 @@ const RestrauntCard = ({
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
           cloudinaryImageId
         }
+        alt="restaurant"
       />
       <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{lastMileTravelString} minutes</h4>
+      <h3>{cuisines.join(',')}</h3>
+      <h4>{lastMileTravelString}</h4>
     </div>
   );
 };
 
-// no key (not acceptable)<<<<<<<<<<< index key(last option) <<<<< unquie key (best practice)
 const Body = () => {
-  return (
-    <div className="restaurant-list">
-      {restrautList.map((restaurant) => {
-        return <RestrauntCard {...restaurant.data} key={restaurant.data.id} />;
-      })}
-    </div>
-  );
-};
+    return(
+        <div className="restaurant-list">
+        {restrautList.map( (restaurant) => {
+            return(
+                <RestrauntCard {...restaurant.data} key={restaurant.data.id}/>
+            )
+        })}
+        </div>
+    )
+}
 
 const Footer = () => {
-  return <h4>Footer</h4>;
-};
+    return(
+        <div>Footer</div>
+    )
+}
 
 const AppLayout = () => {
-  return (
-    <>
-      <Header />
-      <Body />
-      <Footer />
-    </>
-  );
-};
+    return(
+        <React.Fragment>
+        <Header/>
+        <Body/>
+        <Footer/>
+    </React.Fragment>
+
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+root.render(<AppLayout />)

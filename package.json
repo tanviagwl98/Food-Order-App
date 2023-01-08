@@ -2,11 +2,11 @@
     "name": "namastereact",
     "version": "1.0.0",
     "description": "1. https://github.com/tanviagwl98/NamasteReact/blob/master/Learning.md\r 2. https://github.com/tanviagwl98/NamasteReact/blob/master/Assignment.md",
-    "browsersList": "last 2 versions",
+    "browserslist": "last 2 versions",
     "scripts": {
         "test": "jest",
-        "start": "parcel",
-        "build": "parcel build"
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
     },
     "repository": {
         "type": "git",
@@ -19,6 +19,8 @@
     },
     "homepage": "https://github.com/tanviagwl98/NamasteReact#readme",
     "devDependencies": {
+        "@babel/core": "^7.20.7",
+        "babel-plugin-transform-remove-console": "^6.9.4",
         "parcel": "^2.8.2",
         "process": "^0.11.10"
     },
