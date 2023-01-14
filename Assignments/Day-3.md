@@ -1,12 +1,12 @@
-#Day-3
+# Day-3
 
-###What is JSX?
-
-
-###Superpowers of JSX
+### What is JSX?
 
 
-###Role of type tag in script tag? What options can be used in it?
+### Superpowers of JSX
 
 
-###{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent><TitleComponent/>}
+### Role of type tag in script tag? What options can be used in it?
+
+
+### {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent><TitleComponent/>}
