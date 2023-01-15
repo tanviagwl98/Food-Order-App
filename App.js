@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM, { createRoot } from "react-dom/client";
-import {Header} from './src/Components/Header';
-import Body from './src/Components/Body'
+import { Header } from "./src/Components/Header";
+import Body from "./src/Components/Body";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import About from "./src/Components/About";
+import Contact from "./src/Components/Contact";
+import Error from "./src/Components/Error";
+import Footer from "./src/Components/Footer";
+import RestaurantMenu from "./src/Components/RestaurantMenu";
 /**
      Header
         - Logo(Title)
@@ -21,26 +27,52 @@ import Body from './src/Components/Body'
     
     */
 
-
 //Config Driven UI
-
-
-
-
-const Footer = () => {
-  return <h4>Footer</h4>;
-};
 
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
 };
 
+const AppRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children:[
+      {
+        path: "/",
+        element: <Body />,
+    
+      },
+      {
+        path: "/about",
+        element: <About />,
+    
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+    
+      },
+      {
+        path: "/",
+        element: <Body />,
+      },
+
+      {
+        path:"/restaurant/:resId",
+        element:<RestaurantMenu />
+      }
+    ]
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(<RouterProvider router = {AppRouter}/>);
