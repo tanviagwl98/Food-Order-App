@@ -18,12 +18,16 @@ It is a traditional project architecture followed since ages in IT sector.
 
 
 ### Why do we need useEffect hook?
+The useEffect hook helps in performing side efffects (like API call, Data fetching, setting up a subscription, and manually changing the DOM in React components) in functional components.
 
+It takes up two arguments:
+- Callback Function
+- Dependency Array (until you wish to render your component with every rerender, dependency array should be added as empty [])
 
 ### What is Optional Chaining?
 
 
-### What is SHimmer UI?
+### What is Shimmer UI?
 
 
 ### Difference between JS Expression & JS Statement.
