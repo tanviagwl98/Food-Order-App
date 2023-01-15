@@ -12,6 +12,7 @@ const Title = () => (
 
 // Composing Comopnentss
 export const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   return (
     <div className="header">
       <Title />
@@ -23,6 +24,7 @@ export const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      {isLoggedIn ? (<button onClick={() => {setIsLoggedIn(false)}}>Login</button>):(<button onClick={() => {setIsLoggedIn(true)}}>Logout</button>)}
     </div>
   );
 };
