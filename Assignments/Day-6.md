@@ -25,13 +25,14 @@ It takes up two arguments:
 - Dependency Array (until you wish to render your component with every rerender, dependency array should be added as empty [])
 
 ### What is Optional Chaining?
+Optional Chaining "?." operator is used to access object's property or to call a function. If the object accessed or function called with undefined or null, ?. will retrun undefined instaed of throwing an error.
 
 
 ### What is Shimmer UI?
-
+Shimmer is a temporary animation placeholder for when data from the service call takes time to get back and we don't want to block rendering the rest of the UI.
 
 ### Difference between JS Expression & JS Statement.
-
+Expressions produce a value, and that value will be passed into the function. Statements don't produce a value, and so they can't be used as function arguments
 
 ### What is conditional rendering, explain with coding example?
 
