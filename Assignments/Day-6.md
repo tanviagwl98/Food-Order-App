@@ -25,7 +25,7 @@ It takes up two arguments:
 - Dependency Array (until you wish to render your component with every rerender, dependency array should be added as empty [])
 
 ### What is Optional Chaining?
-Optional Chaining "?." operator is used to access object's property or to call a function. If the object accessed or function called with undefined or null, ?. will retrun undefined instaed of throwing an error.
+Optional Chaining "?." operator is used to access object's property or to call a function. If the object accessed or function called with undefined or null, ?. will return undefined instead of throwing an error.
 
 
 ### What is Shimmer UI?
@@ -55,3 +55,4 @@ Async functions can contain zero or more await expressions. Await expressions ma
 
 
 ### What is the use of const json = await json.data in getRestaurantData?
+The resolved value of the promise is treated as the return value of the await expression. 
