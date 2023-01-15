@@ -45,9 +45,13 @@ E.g. There is a card component which is rendered in sometime if data is availabl
 return !data ? (FirstComponent) : (Second Component)
 
 ### What is CORS?
-
+Cross-origin resource sharing (CORS) is a browser security feature that restricts cross-origin HTTP requests that are initiated from scripts running in the browser. If REST API's resources receive non-simple cross-origin HTTP requests, there is need to enable CORS support.
 
 ### What is async and await?
+The async function declaration declares an asynchronous function where the await keyword is permitted within the function body. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+Async function can also be defined as expressions.
+
+Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
 
 
 ### What is the use of const json = await json.data in getRestaurantData?
