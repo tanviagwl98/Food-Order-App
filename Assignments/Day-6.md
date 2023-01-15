@@ -33,9 +33,16 @@ Shimmer is a temporary animation placeholder for when data from the service call
 
 ### Difference between JS Expression & JS Statement.
 Expressions produce a value, and that value will be passed into the function. Statements don't produce a value, and so they can't be used as function arguments
+e.g.
+Expression: {console.log("Hello"};
+Statement: let a = 20;
 
 ### What is conditional rendering, explain with coding example?
+Conditional Rendering works the same way conditions work in JavaSCript. We can use condition (if else) or ternary operators to render the components based on some conditions like current state wrt to update to be done in Component.
 
+E.g. There is a card component which is rendered in sometime if data is available. In this case two different components can be rendered with a condition, 
+
+return !data ? (FirstComponent) : (Second Component)
 
 ### What is CORS?
 
