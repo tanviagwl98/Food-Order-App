@@ -1,26 +1,26 @@
-#Day-4
+# Day-4
 
-###Is JSX madatory for React?
+### Is JSX madatory for React?
 No
 
-###Is ES6 mandatory for React?
+### Is ES6 mandatory for React?
 No
 
-###Write a comment in JSX
+### Write a comment in JSX
 
-###What is <></> and <React.Fragment></React.Fragment>
+### What is <></> and <React.Fragment></React.Fragment>
 
-###What is virtual DOM?
+### What is virtual DOM?
 
-###What is Reconciliation?
+### What is Reconciliation?
 
-###What is React Fiber?
+### What is React Fiber?
 
-###Why and when we need keys in React?
+### Why and when we need keys in React?
 
-###Can we use index in React as keys?
+### Can we use index in React as keys?
 
-###What is props in React?
+### What is props in React?
 
-###What is config driven UI?
+### What is config driven UI?
 
