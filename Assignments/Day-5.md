@@ -1,4 +1,4 @@
-# Day-5
+# Ch-5
 
 ### What is the difference between Named Export, Default Export and * as export?
 Named Export
