@@ -1,4 +1,4 @@
-# Day 2
+# Ch - 2
 
 ### What is NPM?
 ### What is Parcel/Webpack? Why do we need it?
