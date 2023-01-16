@@ -2,7 +2,8 @@
 
 ### What is JSX?
 HTML like syntax in Javascript.
-const element = <h1>Hello, world!</h1>;
+
+> const element = {<tagName>Hello, world!</tagName>}
 
 ### Superpowers of JSX
 It enhances:
@@ -16,4 +17,4 @@ The type attribute identifies the content between the <script> and </script> tag
 1. application/javascript:
 2. module: Each module explicitly identifies declarations it uses that need to be provided by other modules and which of its declarations are available for use by other modules.
 
-### {TitleComponent} vs {<TitleComponent/>} vs {?*<TitleComponent><TitleComponent/>*/}
+###  ``` {TitleComponent} vs {<TitleComponent/>} vs > {<TitleComponent><TitleComponent/>} ```
