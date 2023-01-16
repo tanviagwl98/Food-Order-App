@@ -27,11 +27,13 @@ A fiber corresponds to a stack frame, but it also corresponds to an instance of 
 
 ### Why and when we need keys in React?
 Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
-WHen there are same type of elements like <li>, keys become necessary to identify what each <li> item refers to when some changes are made.
-  
+When there are same type of elements like <li>, keys become necessary to identify what each <li> item refers to when some changes are made.
+When children have keys, React uses the key to match children in the original tree with children in the subsequent tree.  
+
 ### Can we use index in React as keys?
 Yes, index can be used but it is not a good practice as index can be re-ordered as a result it degrades the application performance.
 ### What is props in React?
 
 ### What is config driven UI?
-
+Config driven UI is a way of using modularity to build a loosely coupled set of components that are then composed together using a common interface.
+e.g. Different forms need to be created based on different compositions like styling etc.
