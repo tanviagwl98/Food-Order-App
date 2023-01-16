@@ -1,4 +1,4 @@
-# Day-1
+# Ch-1
 
 ### What is Emmet in VS Code?
 - Emmet is a plugin to improve HTML and CSS workflow in code editors.
