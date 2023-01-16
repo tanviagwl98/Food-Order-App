@@ -1,4 +1,4 @@
-# Day-3
+# Ch-3
 
 ### What is JSX?
 
