@@ -1,7 +1,7 @@
 # Ch-3
 
 ### What is JSX?
-HTML like syntax in Javascript.
+HTML like syntax in Javascript .
 
 > const element = {<tagName>Hello, world!</tagName>}
 
