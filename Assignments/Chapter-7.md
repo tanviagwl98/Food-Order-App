@@ -13,7 +13,14 @@ import Logo from "./img/Logo.png"
 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffoodvilla.no%2F&psig=AOvVaw2PifP2gYaNfLEx0Dm9zX9a&ust=1674022674183000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKjJoK36zfwCFQAAAAAdAAAAABAJ" alt="logo"/>
 ```
 ### What would happen if we do console.log(useState())?
+It returns an array of two elements: [variable, function]
 
+The value of 'variable' is set to undefined.
+The function returns following attributes:
+length: 1
+name: "bound dispatchSetState"
+arguments: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at Function.invokeGetter (<anonymous>:3:28)]
+caller: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to t
 
 ### How will useEffect behave if we don't add dependency array?
 It runs both after the first render and after every update.
