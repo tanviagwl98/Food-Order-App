@@ -18,7 +18,14 @@ It needs not be pushed to .gitignore.
 The npx stands for Node Package Execute and it comes with the npm, when you installed npm above 5.2.0 version then automatically npx will installed. It is an npm package runner that can execute any package that you want from the npm registry without even installing that package.
 
 ### What is difference between dependencies vs devDependencies?
+A dependency is a library that a project needs to function effectively. DevDependencies are the packages a developer needs during development. A peer dependency specifies that our package is compatible with a particular version of an npm package.
+
 ### What is Tree Shaking?
+Tree Shaking is a term commonly used for removal of dead code in JavaScript context. 
+It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+
+In modern JavaScript applications, we use module bundlers (e.g., parcel) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
+
 ### What is Hot Module Replacement?
 ### List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
 ### What is .gitignore? What should we add and not add into it?
