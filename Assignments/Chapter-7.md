@@ -16,10 +16,15 @@ import Logo from "./img/Logo.png"
 It returns an array of two elements: [variable, function]
 
 The value of 'variable' is set to undefined.
+
 The function returns following attributes:
+
 length: 1
+
 name: "bound dispatchSetState"
+
 arguments: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at Function.invokeGetter (<anonymous>:3:28)]
+
 caller: [Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to t
 
 ### How will useEffect behave if we don't add dependency array?
