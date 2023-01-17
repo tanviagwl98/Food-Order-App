@@ -27,13 +27,42 @@ It relies on the import and export statements to detect if code modules are expo
 In modern JavaScript applications, we use module bundlers (e.g., parcel) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
 
 ### What is Hot Module Replacement?
+Hot-module-reloading lets us change the code of our application while maintaining our current state and position in the website. This allows us to do things like tweak the styling of some page of our app without having to navigate all the way back to that page each time. This helps immensely when prototyping and developing an application.
+
 ### List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+- Tree Shaking
+- Hot Module Replacement
+- Image file minification
+- Cleaning Code
+- Zero configuration
+
+
 ### What is .gitignore? What should we add and not add into it?
-### What is the difference between package.json and package-lock.json
+It is a special file in which we can add file names that we do not wish to add in github repository.
+To add in this file:
+- node_modules
+- .parcel-cache
+
+To not add file:
+- package.json
+- package-lock.json
+
+
+### What is the difference between package.json and package-lock.json?
+**package.json:** A package.json file contains metadata about the project and also the functional dependencies that is required by the application.
+**package-lock.json:** It is created for locking the dependency with the installed version. It will install the exact latest version of that package in your application and save it in package.json. Let’s say if the current version of the package is 1.3.2 then it will save the version with (^) sign. Here carot(^) means, it will support any higher version with major version 1 for eg. 1.2.2. 
+
 ### Why should I not modify package-lock.json?
+Without package.lock.json, there might be some differences in installed versions in different environments. To overcome this problem, package.lock.json is created to have the same results in every environment. It should be in source control with the package.json file because if any other user will clone the project and install dependencies then it will install the exact same dependencies as in package.lock.json to avoid differences.
+
 ### What is node_modules ? Is it a good idea to push that on git?
+
 ### What is the dist folder?
+
 ### What is browserlists?
-### Read about dif bundlers: vite, webpack, parcel
+
 ### Read about: ^ - caret and ~ - tilda
+carot(^) means, it will support any higher version with major version 1 for eg. 1.2.2.
+tilda(~) means, it will support only the current version like 1.2.2 and will not upgrade to any higher version.
+
 ### Read about Script types in html (MDN Docs)
