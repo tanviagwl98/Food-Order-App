@@ -60,6 +60,11 @@ Without package.lock.json, there might be some differences in installed versions
 ### What is the dist folder?
 
 ### What is browserlists?
+Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file.
+
+As javascript evolves, browsers won't support new features at the same pace, for instance not all browsers have built-in support for ES6 (aka ES2015). By using browserslist, transpilers/bundlers know what browsers you want to support, so they can "group" browsers in different categories and generate separate bundles, for example:
+Legacy Bundle: Contains polyfills, larger bundle size, compatible with old browsers without ES6 support.
+Modern Bundle: Smaller bundle size, optimized for modern browsers.
 
 ### Read about: ^ - caret and ~ - tilda
 carot(^) means, it will support any higher version with major version 1 for eg. 1.2.2.
