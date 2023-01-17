@@ -56,8 +56,11 @@ To not add file:
 Without package.lock.json, there might be some differences in installed versions in different environments. To overcome this problem, package.lock.json is created to have the same results in every environment. It should be in source control with the package.json file because if any other user will clone the project and install dependencies then it will install the exact same dependencies as in package.lock.json to avoid differences.
 
 ### What is node_modules ? Is it a good idea to push that on git?
+A node_modules directory contains all the React dependencies packages: react , react-dom , and their transitive dependencies like webpack , babal , rxjs , ESLint , etc., to build and run a React project.
+It should not be pushed on git due to its large size and it can be installed wherever required by using npm install for the first time setup of the code.
 
 ### What is the dist folder?
+dist/ is the distribution version that has been modified to perform better for users not looking to modify how the code works.
 
 ### What is browserlists?
 Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file.
