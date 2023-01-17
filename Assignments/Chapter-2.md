@@ -1,9 +1,22 @@
 # Ch - 2
 
 ### What is NPM?
+It is a library and registry for javascript software packages. It has command line tools to help install the different packages and manage their dependencies. 
+
 ### What is Parcel/Webpack? Why do we need it?
-### What is .parcel-cache
+Parcel is a "Blazing fast, zero configuration web application bundler." This means it handles a lot of the hard bundling stuff for you under the hood and allows you to create a relatively lean setup of React (or any other web project that requires bundling).
+
+It works smoothly to build single and multi page React applications. It includes a first-class development experience with Fast Refresh, and supports JSX, TypeScript, Flow, and many styling methodologies.
+
+It helps to minify, clean, and make code compact so that it becomes easier to send a request or receive the response from the server when it usually takes you to transfer multiple files without using any bundler for loading the page of your application. It substantially reduce the time it takes for the transfer of data and files to the server from the application. Along with that parcel remove the unnecessary comments, new lines, any kind of block delimiters, and white spaces while the functionality of the code remains unchanged.
+
+### What is .parcel-cache?
+The .cache folder (or .parcel-cache in parcel v2) stores information about your project when parcel builds it, so that when it rebuilds, it doesn't have to re-parse and re-analyze everything from scratch. It's a key reason why parcel can be so fast in development mode.
+It needs not be pushed to .gitignore.
+
 ### What is npx ?
+The npx stands for Node Package Execute and it comes with the npm, when you installed npm above 5.2.0 version then automatically npx will installed. It is an npm package runner that can execute any package that you want from the npm registry without even installing that package.
+
 ### What is difference between dependencies vs devDependencies?
 ### What is Tree Shaking?
 ### What is Hot Module Replacement?
