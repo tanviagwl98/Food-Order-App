@@ -1,8 +1,15 @@
 # Ch-7
 
 ### What are different ways to add images in React? Explain with code.
+1. Adding image from project folder:
+import Logo from "./img/Logo.png"
+<img src{Logo} alt="logo"/>
+
+2. Adding image using url:
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffoodvilla.no%2F&psig=AOvVaw2PifP2gYaNfLEx0Dm9zX9a&ust=1674022674183000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKjJoK36zfwCFQAAAAAdAAAAABAJ" alt="logo"/>
 
 ### What would happen if we do console.log(useState())?
+
 
 ### How will useEffect behave if we don't add dependency array?
 It runs both after the first render and after every update.
