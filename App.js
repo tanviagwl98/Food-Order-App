@@ -8,6 +8,8 @@ import Contact from "./src/Components/Contact";
 import Error from "./src/Components/Error";
 import Footer from "./src/Components/Footer";
 import RestaurantMenu from "./src/Components/RestaurantMenu";
+import { Login } from "./src/Components/Login";
+
 /**
      Header
         - Logo(Title)
@@ -40,37 +42,39 @@ const AppLayout = () => {
 };
 
 const AppRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppLayout />,
-    errorElement: <Error />,
-    children:[
       {
-        path: "/",
-        element: <Body />,
-    
-      },
-      {
-        path: "/about",
-        element: <About />,
-    
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-    
-      },
-      {
-        path: "/",
-        element: <Body />,
-      },
+      path: "/",
+      element: <Login />,
+      errorElement: <Error />,
+    },
+    {
+      path: "/home",
+      element: <AppLayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: "/home",
+          element: <Body />,
+        },
+        {
+          path: "/home/about",
+          element: <About />,
+        },
+        {
+          path: "/home/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/home",
+          element: <Body />,
+        },
 
-      {
-        path:"/restaurant/:resId",
-        element:<RestaurantMenu />
-      }
-    ]
-  },
+        {
+          path: "/home/restaurant/:resId",
+          element: <RestaurantMenu />,
+        },
+      ],
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
