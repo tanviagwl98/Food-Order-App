@@ -1,5 +1,7 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -11,14 +13,18 @@ const schema = Yup.object().shape({
 });
 
 export const Login = () => {
+    const navigate = useNavigate();
+  const handleSubmit = () => {
+    console.log("Form is submitted");
+    navigate('/home');
+    console.log(navigate('/home'))
+  };
   return (
     <>
       <Formik
         validationSchema={schema}
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values) => {
-          alert(JSON.stringify(values));
-        }}
+        onSubmit={handleSubmit}
       >
         {({
           values,
@@ -53,7 +59,7 @@ export const Login = () => {
                   value={values.password}
                 />
                 <p className="error">{errors.password && touched.password && errors.password}</p>
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={handleSubmit}>Submit</button>
               </form>
             </div>
           </div>
@@ -62,3 +68,4 @@ export const Login = () => {
     </>
   );
 };
+ 
