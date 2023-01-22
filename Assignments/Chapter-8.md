@@ -5,7 +5,8 @@ Super(): It is used to call the constructor of its parent class. This is require
 Props: It is a special keyword that is used in react stands for properties. Used for passing data from one component to another.
 
 ### Why cannot async be used before useEffect and used before componentDidMount?
-
+Because React’s useEffect hook expects a cleanup function returned from it which is called when the component unmounts. Using an async function here will cause a bug as the cleanup function will never get called.
+While in case of Class Components, unmounting happens in other function "componentWillUnmount".
 
 ### How to create Nested Routes using react-router-dom configuration?
 By calling {Outlet} from 'react-router-dom' in the parent component of the nested component.
