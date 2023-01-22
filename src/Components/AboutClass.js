@@ -17,7 +17,7 @@ class About extends Component {
       <>
         {" "}
         <h1>About Us Page</h1>
-        <Profile/>
+        <Profile name={"Tanvi"}/>
       </>
     );
   }

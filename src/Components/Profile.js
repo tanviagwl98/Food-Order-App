@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 
-const Profile = () => {
+const Profile = (props) => {
     const [count, setCount] = useState(0);
 
     useEffect( ()=>{
@@ -19,7 +19,7 @@ const Profile = () => {
     return(
         <div>
         <h2>Profile Component</h2>
-        <h3>Name: Tanvi</h3>
+        <h3>Name: {props.name}</h3>
         <h3>Count: {count}</h3>
         <button
           onClick={() => {

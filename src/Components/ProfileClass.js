@@ -31,7 +31,7 @@ class ProfileClass extends Component{
         return(
             <div>
             <h1> Profile Class Component </h1>
-             <h2>Name: {this.state.userInfo.name}</h2>
+             <h2>Name: {this.props.name}</h2>
              <h2>Location: {this.state.userInfo.location}</h2>
           </div>
         )

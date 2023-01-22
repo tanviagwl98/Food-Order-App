@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <h1>About Us Page</h1>
-      <ProfileFunctional name="Tanvi"/>
+      <ProfileFunctional name={"Tanvi"}/>
     </>
   );
 };
