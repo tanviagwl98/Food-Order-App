@@ -14,7 +14,7 @@ React.Suspense lets you specify the loading indicator in case some components in
 Lazy loading components is the only use case supported by <React.Suspense>
 
 ### When and why do we need Suspense?
-It is used in lazy loading when code-splitting is implemented to created multiple bundles to avoid loading time.
+It is used in lazy loading when code-splitting is implemented to created multiple bundles to avoid loading time. The best practice is to place <Suspense> where you want to see a loading indicator, but to use lazy() wherever you want to do code splitting.
 
 ### Advantages and disadvantages of using code splitting pattern.
 Advantages:
