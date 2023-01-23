@@ -3,24 +3,17 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "../Components/Shimmer";
 import {Link} from "react-router-dom";
-
+import {filterData} from "../utils/helper";
+import useOnline from "../utils/useOnline";
 // What is state
 // what is React Hooks? - functions,
 // What is useState
-
-function filterData(searchText, restaurants) {
-  const data = restaurants.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
-  );
-  console.log("filtered", data);
-
-  return data;
-}
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const isOnline = useOnline();
 
   useEffect(() => {
     getRestaurantData();
@@ -34,6 +27,12 @@ const Body = () => {
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
+
+  if(!isOnline){
+    return <h1>Oooops! Check your internet connection!</h1>
+  }
+  
+  
   if (!allRestaurants) return null;
   return allRestaurants.length === 0 ? (
     <Shimmer />

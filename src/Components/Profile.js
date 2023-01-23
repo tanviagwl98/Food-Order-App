@@ -15,7 +15,27 @@ const Profile = (props) => {
         }
     }, []);
     console.log("Child render");
+/*
+    useEffect(()=>{
+      (async()=> {
 
+      })();
+      return () => {
+
+      }
+    },[])
+
+    *** Named Function ***
+    useEffect(()=>{
+      const getUsers = async()=>{
+
+      }
+      getUsers();
+      return () => {
+
+      };
+    },[])
+*/
     return(
         <div>
         <h2>Profile Component</h2>

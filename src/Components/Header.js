@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../assets/img/foodvillalogo.png'
 import {Link, useNavigate} from 'react-router-dom'
+import useOnline from '../utils/useOnline';
+
 const Title = () => (
   <a href="/">
     <img
@@ -14,6 +16,7 @@ const Title = () => (
 // Composing Comopnentss
 export const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const isOnline = useOnline();
   const navigate = useNavigate();
   return (
     <div className="header">
@@ -24,9 +27,10 @@ export const Header = () => {
           <Link to="/home/about" className="spacing"><li>About</li></Link>
           <Link to= "/home/contact" className="spacing"><li>Contact</li></Link>
           <Link to="/home" className="spacing"><li>Cart</li></Link>
+          <Link to="/home/instamart" className="spacing"><li>Instamart</li></Link>
         </ul>
       </div>
-//       {isLoggedIn ? (<button onClick={() => {setIsLoggedIn(false)}}>Login</button>):(<button onClick={() => {setIsLoggedIn(true)}}>Logout</button>)}
+      <h1>{isOnline ? "✅" : "🔴"}</h1>
     <button className='logout-btn' onClick={() => {navigate('/')}}>Logout</button>
     </div>
   );
