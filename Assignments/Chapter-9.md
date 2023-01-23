@@ -23,9 +23,9 @@ It is used in lazy loading when code-splitting is implemented to created multipl
 - Code-splitting is a feature supported by bundlers like parcel, webpack etc to create multiple bundles that can be dynamically loaded at run-time.
 - It helps in lazy-load things, i.e. loading the module/part of code that is required currently by the user.  
 - It has not reduced the overall amount of code in app, instead avoided loading code that the user may never need, and reduced the amount of code needed during the initial load.
-
+  
 **Disadvantages:**
--
+- Code splitting can only be done in client side rendering. This is the reason why the React team recommends using loadable components for code splitting in the server.
 
 ### Why do we get this error: A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. to fix, updates that suspend should be wrapped with startTransition? How does suspense fix this error?
 Any component may suspend as a result of rendering, even components that were already shown to the user. In order for screen content to always be consistent, if an already shown component suspends, React has to hide its tree up to the closest <Suspense> boundary. However, from the user’s perspective, this can be disorienting.
