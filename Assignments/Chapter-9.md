@@ -11,9 +11,10 @@ The lazy component should then be rendered inside a Suspense component, which al
 
 ### What is Suspense?
 React.Suspense lets you specify the loading indicator in case some components in the tree below it are not yet ready to render.
+Lazy loading components is the only use case supported by <React.Suspense>
 
 ### When and why do we need Suspense?
-
+It is used in lazy loading when code-splitting is implemented to created multiple bundles to avoid loading time.
 
 ### Advantages and disadvantages of using code splitting pattern.
 Advantages:
