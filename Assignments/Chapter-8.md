@@ -15,9 +15,17 @@ While in case of Class Components, unmounting happens in other function "compone
 By calling {Outlet} from 'react-router-dom' in the parent component of the nested component.
 
 ### What is the order of life cycle methods calls in Class Based Components in React?
-1. componentDidMount
-2. componentDidUpdate
-3. componentWillUnmount
+1. Mounting
+- constructor()
+- render()
+- componentDidMount()
+
+2. Update
+- render()
+- componentDidUpdate()
+
+3. Unmounting 
+- componentWillUnmount
 
 ### Why do we use componentDidMount?
 
