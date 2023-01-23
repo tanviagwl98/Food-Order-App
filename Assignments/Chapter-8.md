@@ -6,6 +6,9 @@ Props: It is a special keyword that is used in react stands for properties. Used
 
 ### Why cannot async be used before useEffect and used before componentDidMount?
 Because React’s useEffect hook expects a cleanup function returned from it which is called when the component unmounts. Using an async function here will cause a bug as the cleanup function will never get called.
+
+The issue here is that the first argument of useEffect is supposed to be a function that returns either nothing (undefined) or a function (to clean up side effects). But an async function returns a Promise, which can't be called as a function! It's simply not what the useEffect hook expects for its first argument.
+
 While in case of Class Components, unmounting happens in other function "componentWillUnmount".
 
 ### How to create Nested Routes using react-router-dom configuration?
