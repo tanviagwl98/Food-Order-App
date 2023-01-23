@@ -38,5 +38,5 @@ componentWillUnmount() is invoked immediately before a component is unmounted an
 You should not call setState() in componentWillUnmount() because the component will never be re-rendered. Once a component instance is unmounted, it will never be mounted again.
 
 
-### Read about createHashRouter, createMemoryRouter from React Router Docs
+### Read about createHashRouter, createMemoryRouter from React Router Docs (Read and test)
 
