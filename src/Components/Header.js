@@ -6,7 +6,7 @@ import useOnline from '../utils/useOnline';
 const Title = () => (
   <a href="/">
     <img
-      className="logo"
+      className="h-28 p-2"
       alt="logo"
       src={Logo}
     />
@@ -19,19 +19,19 @@ export const Header = () => {
   const isOnline = useOnline();
   const navigate = useNavigate();
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-400 md:bg-yellow-200">
       <Title />
       <div className="nav-items">
-        <ul>
-          <Link className="spacing" to="/home"><li>Home</li></Link>
-          <Link to="/home/about" className="spacing"><li>About</li></Link>
-          <Link to= "/home/contact" className="spacing"><li>Contact</li></Link>
-          <Link to="/home" className="spacing"><li>Cart</li></Link>
-          <Link to="/home/instamart" className="spacing"><li>Instamart</li></Link>
+        <ul className="flex py-10">
+          <Link className="spacing" to="/home"><li className="px-2">Home</li></Link>
+          <Link to="/home/about" className="spacing"><li className="px-2">About</li></Link>
+          <Link to= "/home/contact" className="spacing"><li className="px-2">Contact</li></Link>
+          <Link to="/home" className="spacing"><li className="px-2">Cart</li></Link>
+          <Link to="/home/instamart" className="spacing"><li className="px-2">Instamart</li></Link>
         </ul>
       </div>
       <h1>{isOnline ? "✅" : "🔴"}</h1>
-    <button className='logout-btn' onClick={() => {navigate('/')}}>Logout</button>
+      <button className='bg-purple-900 hover:bg-gray-500 text-white rounded-md m-2 p-2 h-14 align-middle my-8' onClick={() => {navigate('/')}}>Logout</button>
     </div>
   );
 };
