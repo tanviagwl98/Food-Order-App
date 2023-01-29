@@ -53,4 +53,6 @@ e.g.
 @tailwind utilities;
 4. Add in .postcssrc file: plugins: "tailwindcss"{}
 
+### Why do we have .postcssrc file?
+The ".postcssrc" file in a React project is used to configure the PostCSS tool, which is a CSS processor that allows for the use of modern CSS syntax and features in your stylesheets. It enables the use of plugins and tools to transform and enhance your CSS, making the development process faster and more efficient. The ".postcssrc" file contains the rules and plugins that will be used by PostCSS during the build process, which in turn can be utilized in the React project's styling.
 
