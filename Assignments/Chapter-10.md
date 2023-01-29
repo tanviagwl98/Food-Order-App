@@ -37,4 +37,20 @@ e.g.
     require('@tailwindcss/aspect-ratio'),
      ]
 
-### 
+### Explore different ways of writing CSS
+
+1. Inline
+2. Tailwind
+3. Styled Component CSS
+4. Frameworks like Material UI, Chakra etc
+
+### How to configure tailwind css?
+1. npm install tailwind postcss
+2. npx tailwind init
+3. Change index.css:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+4. Add in .postcssrc file: plugins: "tailwindcss"{}
+
+
