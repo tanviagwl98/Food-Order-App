@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import Logo from "../assets/img/foodvillalogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-
+import UserContext from "../utils/UserContext"
 const Title = () => (
   <div className="w-full md:w-auto">
   <img
@@ -18,6 +18,8 @@ export const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const isOnline = useOnline();
   const navigate = useNavigate();
+  const {user} = useContext(UserContext);
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-center bg-pink-50 shadow-lg mx-4 my-2">
       <Title/>
@@ -38,7 +40,8 @@ export const Header = () => {
           <li className="px-2">Instamart</li>
         </Link>
       </ul>
-      
+            <h1>{isOnline ? "✅" : "🔴"}</h1>
+      <span className="p-10 font-bold text-red-900">{user.name}</span>
       <button
         className="p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md mt-2 md:mt-0 md:flex"
         onClick={() => {

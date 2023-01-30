@@ -1,10 +1,12 @@
 //import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "../Components/Shimmer";
 import {Link} from "react-router-dom";
 import {filterData} from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext";
+
 // What is state
 // what is React Hooks? - functions,
 // What is useState
@@ -14,8 +16,9 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const isOnline = useOnline();
+  const {user, setUser} = useContext(UserContext);
 
-  useEffect(() => {
+   useEffect(() => {
     getRestaurantData();
   }, []);
 
@@ -59,6 +62,18 @@ const Body = () => {
         >
           Search
         </button>
+        <input value={user.name} onChange= {
+          e => setUser({
+            ...user,
+            name: e.target.value,
+          })
+        }></input>
+        <input value={user.email} onChange= {
+          e => setUser({
+            ...user,
+            email: e.target.value,
+          })
+        }></input>
       </div>
       
       <div className="flex flex-wrap">

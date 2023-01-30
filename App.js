@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM, { createRoot } from "react-dom/client";
 import { Header } from "./src/Components/Header";
 import Body from "./src/Components/Body";
@@ -11,6 +11,7 @@ import RestaurantMenu from "./src/Components/RestaurantMenu";
 import { Login } from "./src/Components/Login";
 import Profile from "./src/Components/Profile";
 import Shimmer from "./src/Components/Shimmer";
+import UserContext from "./src/utils/UserContext";
 
 const Instamart = lazy(() => import("./src/Components/Instamart"));
 const About = lazy(() => import("./src/Components/About"));
@@ -36,11 +37,18 @@ const About = lazy(() => import("./src/Components/About"));
 //Config Driven UI
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+      name:"Tanvi Agarwal",
+      email:"vini98agwl@gmail.com"
+  });
   return (
     <>
-      <Header />
+     <UserContext.Provider value={{
+      user:user,
+      setUser:setUser
+     }}> <Header />
       <Outlet />
-      <Footer />
+      <Footer /></UserContext.Provider>
     </>
   );
 };
