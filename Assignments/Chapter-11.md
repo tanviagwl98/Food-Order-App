@@ -6,7 +6,8 @@ In React, data is often shared between components using props. Prop drilling is 
 e.g. App.js --> Login Page {user:"Tanvi Agarwal"}--> Dashboard {user:"Tanvi Agarwal"} --> Profile {user:"Tanvi Agarwal"}
 
 ### What is lifting the state up?
-
+In React, many components reflect the same changing data, so lifting the shared state to the closest common ancestors is the best choice.
+Lifting state involves writing more “boilerplate” code than two-way binding approaches, but as a benefit, it takes less work to find and isolate bugs. Since any state “lives” in some component and that component alone can change it, the surface area for bugs is greatly reduced. Additionally, you can implement any custom logic to reject or transform user input.
 
 ### What is Context Provider and Context Consumer?
 
