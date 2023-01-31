@@ -1,7 +1,9 @@
 # Chapter-11
 
 ### What is prop drilling?
+In React, data is often shared between components using props. Prop drilling is a condition in which data is passed from one component through multiple interdependent components until the component in which the data is needed is reached.
 
+e.g. App.js --> Login Page {user:"Tanvi Agarwal"}--> Dashboard {user:"Tanvi Agarwal"} --> Profile {user:"Tanvi Agarwal"}
 
 ### What is lifting the state up?
 
