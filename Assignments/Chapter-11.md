@@ -23,4 +23,7 @@ It requires a function as a child. The funtion receives the current context valu
 ```
 
 ### If you don't pass a value to the provider does it take the default value?
+Yes, it will take a default value.
+But passing undefined as a Provider value does not cause consuming components to use defaultValue.
+
 
