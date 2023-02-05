@@ -6,5 +6,8 @@
   //       "exclude": ["error", "warn"]
   //     }
   //   ]
-  // ]
+  // ],
+  "presets": [
+    ["@babel/preset-env", { "targets": { "node": "current" } }]
+  ]
 }
