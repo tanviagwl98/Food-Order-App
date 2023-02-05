@@ -2,8 +2,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "../Components/Shimmer";
-import {Link} from "react-router-dom";
-import {filterData} from "../utils/helper";
+import { Link } from "react-router-dom";
+import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
 
@@ -16,9 +16,9 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const isOnline = useOnline();
-  const {user, setUser} = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
-   useEffect(() => {
+  useEffect(() => {
     getRestaurantData();
   }, []);
 
@@ -31,11 +31,10 @@ const Body = () => {
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-  if(!isOnline){
-    return <h1>Oooops! Check your internet connection!</h1>
+  if (!isOnline) {
+    return <h1>Oooops! Check your internet connection!</h1>;
   }
-  
-  
+
   if (!allRestaurants) return null;
   return allRestaurants.length === 0 ? (
     <Shimmer />
@@ -43,6 +42,7 @@ const Body = () => {
     <>
       <div className="p-5 bg-pink-50 my-5">
         <input
+          data-testid="search-input"
           type="text"
           className="focus:bg-green-200 p-2 m-2"
           placeholder="Search"
@@ -53,6 +53,7 @@ const Body = () => {
         />
         <button
           className="p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md"
+          data-testid="search-btn"
           onClick={() => {
             //need to filter the data
             const data = filterData(searchText, allRestaurants);
@@ -62,21 +63,27 @@ const Body = () => {
         >
           Search
         </button>
-        <input value={user.name} onChange= {
-          e => setUser({
-            ...user,
-            name: e.target.value,
-          })
-        }></input>
-        <input value={user.email} onChange= {
-          e => setUser({
-            ...user,
-            email: e.target.value,
-          })
-        }></input>
+        <input
+          value={user.name}
+          onChange={(e) =>
+            setUser({
+              ...user,
+              name: e.target.value,
+            })
+          }
+        ></input>
+        <input
+          value={user.email}
+          onChange={(e) =>
+            setUser({
+              ...user,
+              email: e.target.value,
+            })
+          }
+        ></input>
       </div>
-      
-      <div className="flex flex-wrap">
+
+      <div className="flex flex-wrap" data-testid="res-list">
         {allRestaurants.length === 0 ? (
           <h1>No Matching Records!!!</h1>
         ) : (
@@ -84,8 +91,12 @@ const Body = () => {
             return restaurant?.length === 0 ? (
               <h1>No matching results found!</h1>
             ) : (
-              <Link to  = {"restaurant/" + restaurant.data.id} key={restaurant.data.id}>
-              <RestaurantCard {...restaurant.data} /></Link>
+              <Link
+                to={"restaurant/" + restaurant.data.id}
+                key={restaurant.data.id}
+              >
+                <RestaurantCard {...restaurant.data} />
+              </Link>
             );
           })
         )}

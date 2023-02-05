@@ -11,6 +11,7 @@ const Title = () => (
     className="w-full text-center md:text-left"
     alt="logo"
     src={Logo}
+    data-testid="logo"
   />
 </div>
 );
@@ -37,13 +38,13 @@ export const Header = () => {
           <li className="px-2">Contact</li>
         </Link>
         <Link to="/home/cart" className="spacing">
-          <li className="px-2">Cart - {cartItems.length}</li>
+          <li className="px-2" data-testid="cart">Cart - {cartItems.length}</li>
         </Link>
         <Link to="/home/instamart" className="spacing">
           <li className="px-2">Instamart</li>
         </Link>
       </ul>
-            <h1>{isOnline ? "✅" : "🔴"}</h1>
+            <h1 data-testid="online-status">{isOnline ? "✅" : "🔴"}</h1>
       <span className="p-10 font-bold text-red-900">{user.name}</span>
       <button
         className="p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md mt-2 md:mt-0 md:flex"

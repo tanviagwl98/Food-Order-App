@@ -35,10 +35,10 @@ const RestaurantMenu = () => {
       </div>
       <div className="p-5">
         <h1>Menu</h1>
-        <ul>
+        <ul data-testid="menu">
           {Object.values(restaurant?.menu?.items).map((item) => (
             <li key={item.id}>{item.name}
-            <button className="bg-green-300 p-1 m-2" onClick={() => {handleFoodItem(item)}}> Add
+            <button className="bg-green-300 p-1 m-2" onClick={() => {handleFoodItem(item)}} data-testid = "add-btn"> Add
             </button></li>
           ))}
         </ul>
