@@ -42,3 +42,32 @@ A "slice" is a collection of Redux reducer logic and actions for a single featur
 ### Explain Selector
 
 ### Explain createSlice and the configuration it takes.
+Redux Toolkit has a function called createSlice, which takes care of the work of generating action type strings, action creator functions, and action objects.
+In this there are few parameters that need to be passed.
+
+- The first one is "name", it is to define the slice's purpose or what it is going to be sued for.
+- Provide initial state for the functionality.
+```
+import { createSlice } from "@reduxjs/toolkit";
+
+const cartSlice = createSlice({
+    name:"cart",
+    initialState: {
+        items:[],
+    },
+    reducers: {
+        addItem: (state, action) => {
+            state.items.push(action.payload);
+        },
+        removeItem: (state, action) => {
+            state.items.pop();
+        },
+        clearCart: (state) => {
+            state.items = [];
+        },
+    },
+});
+
+export const {addItem, removeItem, clearCart} = cartSlice.actions;
+export default cartSlice.reducer;
+```
