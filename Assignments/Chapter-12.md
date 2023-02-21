@@ -47,6 +47,7 @@ In this there are few parameters that need to be passed.
 
 - The first one is "name", it is to define the slice's purpose or what it is going to be sued for.
 - Provide initial state for the functionality.
+- Write an object that has some reducer functions in it, and it generates the corresponding action code automatically. 
 ```
 import { createSlice } from "@reduxjs/toolkit";
 
