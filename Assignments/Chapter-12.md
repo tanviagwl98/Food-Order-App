@@ -40,6 +40,8 @@ It is a pure function responsible to make any changes in the state of the store 
 A "slice" is a collection of Redux reducer logic and actions for a single feature in your app, typically defined together in a single file. The name comes from splitting up the root Redux state object into multiple "slices" of state.
 
 ### Explain Selector
+Allows you to extract data from the Redux store state, using a selector function.
+The selector is approximately equivalent to the mapStateToProps argument to connect conceptually. The selector will be called with the entire Redux store state as its only argument. The selector will be run whenever the function component renders (unless its reference hasn't changed since a previous render of the component so that a cached result can be returned by the hook without re-running the selector). useSelector() will also subscribe to the Redux store, and run your selector whenever an action is dispatched.
 
 ### Explain createSlice and the configuration it takes.
 Redux Toolkit has a function called createSlice, which takes care of the work of generating action type strings, action creator functions, and action objects.
