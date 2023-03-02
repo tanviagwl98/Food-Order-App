@@ -48,8 +48,3 @@ Snapshot testing: With Jest, you can take a "snapshot" of the output of a compon
 Code coverage reporting: Jest provides detailed code coverage reporting that allows developers to see how much of their code is covered by tests.
 
 Asynchronous testing: Jest provides support for asynchronous testing, which is particularly useful for testing asynchronous React components.
-
-Overall, Jest is a powerful and comprehensive testing framework that makes it easier for developers to write and run tests for their JavaScript code, ensuring that their code is reliable and bug-free.
-
-
-
