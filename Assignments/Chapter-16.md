@@ -30,4 +30,21 @@ function MyComponent({ a, b }) {
 
 ### useCallback
 
+useCallback is a React hook that is used to optimize performance by memoizing a function. It is similar to the useMemo hook, but instead of memoizing a value, it memoizes a function.
+
+The useCallback hook takes two arguments: a function and an array of dependencies. The function is only re-created when one of the dependencies has changed. This is useful when passing a function down to child components, since it ensures that the child components do not unnecessarily re-render when the function reference changes.
+
+```
+import React, { useCallback } from 'react';
+
+function MyComponent({ onClick }) {
+  const handleClick = useCallback(() => {
+    console.log('Button clicked!');
+    onClick();
+  }, [onClick]);
+
+  return <button onClick={handleClick}>Click me</button>;
+}
+
+```
 ### useRef
