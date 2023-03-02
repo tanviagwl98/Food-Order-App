@@ -14,6 +14,20 @@ _useMemo_ is a React hook that is used to optimize performance by memoizing the 
 
 The _useMemo_ hook takes two arguments: a function that returns a value, and an array of dependencies. The function is only executed when one of the dependencies has changed, and the result of the function is cached until the next render.
 
+```
+import React, { useMemo } from 'react';
+
+function MyComponent({ a, b }) {
+  const result = useMemo(() => {
+    // This function is only executed when `a` or `b` changes
+    console.log('Computing result...');
+    return a + b;
+  }, [a, b]);
+
+  return <div>Result: {result}</div>;
+}
+```
+
 ### useCallback
 
 ### useRef
