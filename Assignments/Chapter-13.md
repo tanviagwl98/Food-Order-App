@@ -37,3 +37,19 @@ test("Sum of two numbers", ()=> {
 
 
 ### What is Jest and why do we use it?
+Jest is a JavaScript testing framework that is used to test JavaScript code, particularly code written in the React framework. Jest is developed and maintained by Facebook and is widely used by developers and organizations for testing their JavaScript code.
+
+Jest provides a simple and easy-to-use interface for writing and running tests, and it comes with a range of features that make testing more efficient and effective. Some of the key features of Jest include:
+
+Built-in mocking: Jest provides built-in support for mocking modules, functions, and objects, making it easy to isolate components for testing.
+
+Snapshot testing: With Jest, you can take a "snapshot" of the output of a component and compare it to a previous snapshot to ensure that changes haven't introduced unexpected behavior.
+
+Code coverage reporting: Jest provides detailed code coverage reporting that allows developers to see how much of their code is covered by tests.
+
+Asynchronous testing: Jest provides support for asynchronous testing, which is particularly useful for testing asynchronous React components.
+
+Overall, Jest is a powerful and comprehensive testing framework that makes it easier for developers to write and run tests for their JavaScript code, ensuring that their code is reliable and bug-free.
+
+
+
