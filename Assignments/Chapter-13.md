@@ -34,7 +34,12 @@ test("Sum of two numbers", ()=> {
     expect(sum(2,5)).toBe(7);
 })
 ```
-
+React Testing Library provides a set of utilities for interacting with React components in a testing environment. These utilities include:
+- **render:** A function that renders a React component into a testing environment.
+- **fireEvent:** A function that simulates user events, such as clicking or typing.
+- **getBy:** A set of functions that retrieve DOM elements based on their attributes or text content.
+- **queryBy:** A set of functions that retrieve DOM elements and return null if they are not found.
+- **waitFor:** A function that waits for a specified condition to be true before continuing with the test.
 
 ### What is Jest and why do we use it?
 Jest is a JavaScript testing framework that is used to test JavaScript code, particularly code written in the React framework. Jest is developed and maintained by Facebook and is widely used by developers and organizations for testing their JavaScript code.
