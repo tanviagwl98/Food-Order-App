@@ -48,3 +48,6 @@ function MyComponent({ onClick }) {
 
 ```
 ### useRef
+useRef is a React hook that is used to create a mutable variable that persists across component renders. It allows us to keep values or references to DOM nodes that would otherwise be lost between renders.
+
+The useRef hook takes an initial value as its argument and returns a mutable ref object with a .current property that can be used to store and update values.
