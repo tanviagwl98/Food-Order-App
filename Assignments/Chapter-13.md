@@ -26,7 +26,14 @@ describe('Enzyme example', () => {
 ```
 
 **React Testing Library:** React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.The React Testing Library is a very light-weight solution for testing React components. It provides light utility functions on top of react-dom and react-dom/test-utils, in a way that encourages better testing practices. 
-
+```
+const sum = (a,b) => {
+    return a+b;
+}
+test("Sum of two numbers", ()=> {
+    expect(sum(2,5)).toBe(7);
+})
+```
 
 
 ### What is Jest and why do we use it?
