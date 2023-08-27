@@ -3,7 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "../Components/Shimmer";
 import { Link } from "react-router-dom";
-import { filterData } from "../utils/helper";
+import { filterData, fourPlusRating } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
 
@@ -17,7 +17,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const isOnline = useOnline();
   const { user, setUser } = useContext(UserContext);
-
+  const [buttonClicked, setButtonClicked] = useState(false);
   useEffect(() => {
     getRestaurantData();
   }, []);
@@ -30,6 +30,17 @@ const Body = () => {
     setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
+
+  const handleRatingButtonClick = () => {
+    if (buttonClicked) {
+      setFilteredRestaurants(allRestaurants);
+    } else {
+      const dataFour = fourPlusRating(allRestaurants);
+      setFilteredRestaurants(dataFour);
+    }
+    setButtonClicked(!buttonClicked);
+  };
+
 
   if (!isOnline) {
     return <h1>Oooops! Check your internet connection!</h1>;
@@ -81,6 +92,11 @@ const Body = () => {
             })
           }
         ></input>
+        <button className={`p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md`}
+          onClick = {handleRatingButtonClick}
+        >
+          4+ Rating
+        </button>
       </div>
 
       <div className="flex flex-wrap" data-testid="res-list">
