@@ -28,19 +28,19 @@ export const Header = () => {
     <div className="flex flex-col md:flex-row justify-between items-center bg-pink-50 shadow-lg mx-4 my-2">
       <Title/>
       <ul className="md:flex md:mt-0 mt-2">
-        <Link className="spacing" to="/home">
+        <Link className="spacing" to="/">
           <li className="px-2">Home</li>
         </Link>
-        <Link to="/home/about" className="spacing">
+        <Link to="/about" className="spacing">
           <li className="px-2">About</li>
         </Link>
-        <Link to="/home/contact" className="spacing">
+        <Link to="/contact" className="spacing">
           <li className="px-2">Contact</li>
         </Link>
-        <Link to="/home/cart" className="spacing">
+        <Link to="/cart" className="spacing">
           <li className="px-2" data-testid="cart">Cart - {cartItems.length}</li>
         </Link>
-        <Link to="/home/instamart" className="spacing">
+        <Link to="/instamart" className="spacing">
           <li className="px-2">Instamart</li>
         </Link>
       </ul>

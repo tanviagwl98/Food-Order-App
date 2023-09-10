@@ -15,7 +15,7 @@ import Shimmer from "./src/Components/Shimmer";
 import UserContext from "./src/utils/UserContext";
 import Cart from "./src/Components/Cart";
 import store from "./src/utils/store";
-
+import RestaurantMenuWithCategory from "./src/Components/RestaurantMenuWithCategory";
 const Instamart = lazy(() => import("./src/Components/Instamart"));
 const About = lazy(() => import("./src/Components/About"));
 /**
@@ -62,22 +62,22 @@ const AppLayout = () => {
 };
 
 const AppRouter = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Login />,
+  //   errorElement: <Error />,
+  // },
   {
     path: "/",
-    element: <Login />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/home",
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Body />,
       },
       {
-        path: "/home/instamart",
+        path: "/instamart",
         element: (
           <Suspense fallback={<Shimmer />}>
             <Instamart />
@@ -85,7 +85,7 @@ const AppRouter = createBrowserRouter([
         ),
       },
       {
-        path: "/home/about",
+        path: "/about",
         element: (
           <Suspense fallback={<h1>Loading....</h1>}>
             <About />
@@ -99,20 +99,20 @@ const AppRouter = createBrowserRouter([
         ],
       },
       {
-        path: "/home/contact",
+        path: "/contact",
         element: <Contact />,
       },
       {
-        path: "/home",
+        path: "/",
         element: <Body />,
       },
 
       {
-        path: "/home/restaurant/:resId",
-        element: <RestaurantMenu />,
+        path: "/restaurant/:resId",
+        element: <RestaurantMenuWithCategory />,
       },
       {
-        path: "/home/cart",
+        path: "/cart",
         element: <Cart />,
       },
 

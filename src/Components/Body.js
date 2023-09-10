@@ -1,5 +1,5 @@
 //import { restaurantList } from "../config";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedResCard} from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "../Components/Shimmer";
 import { Link } from "react-router-dom";
@@ -41,6 +41,7 @@ const Body = () => {
     setButtonClicked(!buttonClicked);
   };
 
+  const withPromoRes = withPromotedResCard(RestaurantCard);
 
   if (!isOnline) {
     return <h1>Oooops! Check your internet connection!</h1>;
@@ -111,7 +112,8 @@ const Body = () => {
                 to={"restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
               >
-                <RestaurantCard {...restaurant?.info} />
+              {restaurant.info.promoted? <withPromoRes resData={restaurant}/>:<RestaurantCard {...restaurant?.info} />} 
+                
               </Link>
             );
           })

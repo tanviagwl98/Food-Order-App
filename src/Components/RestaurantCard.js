@@ -20,3 +20,14 @@ const RestrauntCard = ({
 };
 
 export default RestrauntCard;
+
+export const withPromotedResCard = (RestrauntCard) => {
+  return (props) =>{
+    return(
+        <div>
+          <label className="absolute text-white bg-black">Promoted</label>
+          <RestrauntCard {...props}/>
+        </div>
+    )
+  }
+}

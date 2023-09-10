@@ -16,8 +16,8 @@ export const Login = () => {
     const navigate = useNavigate();
   const handleSubmit = () => {
     console.log("Form is submitted");
-    navigate('/home');
-    console.log(navigate('/home'))
+    // navigate('/home');
+    // console.log(navigate('/home'))
   };
   return (
     <>

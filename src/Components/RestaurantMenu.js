@@ -23,7 +23,9 @@ const RestaurantMenu = () => {
   if (restaurant === null) return <Shimmer />;
 
   const {name, cloudinaryImageId, area,city, avgRating,costForTwoMessage} = restaurant?.cards[0]?.card?.card?.info;
-  const {itemCards} = restaurant?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card; //it is changing in api REGULAR?.cards[1] ==> REGULAR?.cards[2]
+  const {itemCards} = restaurant?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card; //it is changing in api REGULAR?.cards[1] ==> REGULAR?.cards[2]
+  const categories = restaurant?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+  console.log(categories)
   console.log(itemCards);
   return (
     <div className="menu flex">
