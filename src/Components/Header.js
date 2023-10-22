@@ -23,7 +23,7 @@ export const Header = () => {
   const navigate = useNavigate();
   const {user} = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
-
+ 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center bg-pink-50 shadow-lg mx-4 my-2">
       <Title/>

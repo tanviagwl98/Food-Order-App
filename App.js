@@ -52,7 +52,6 @@ const AppLayout = () => {
           setUser: setUser,
         }}
       >
-        {" "}
         <Header />
         <Outlet />
         <Footer />
